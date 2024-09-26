@@ -1,13 +1,7 @@
 'use client';
 import { setUserLocale } from '@/services/locale';
 import { useLocale, useTranslations } from 'next-intl';
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  NativeSelect,
-  Typography,
-} from '@mui/material';
+import { Box, FormControl, NativeSelect, Typography } from '@mui/material';
 
 export default function LocaleSwitcher() {
   const t = useTranslations('localeSwitcher');
@@ -33,14 +27,5 @@ export default function LocaleSwitcher() {
         </NativeSelect>
       </FormControl>
     </Box>
-
-    // <select
-    //   className={styles.localeSwitcher}
-    //   defaultValue={locale}
-    //   onChange={handleChange}
-    // >
-    //   <option value="en">{t('en')}</option>
-    //   <option value="ru">{t('ru')}</option>
-    // </select>
   );
 }

@@ -37,4 +37,15 @@ export enum RoutePath {
   REST_CLIENT_PATCH = '/PATCH',
   REST_CLIENT_DELETE = '/DELETE',
   GRAPHIQL_CLIENT = '/GRAPHQL',
+  NOT_FOUND = '/404',
 }
+
+export const handleScrollWithRef = (ref: React.RefObject<HTMLElement>) => {
+  if (!ref.current) return;
+
+  if (window.scrollY > 10) {
+    ref.current.classList.add('sticky');
+  } else {
+    ref.current.classList.remove('sticky');
+  }
+};
